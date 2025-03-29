@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+NEWS WORLD
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'news/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section id="latest-news-section">
+  <h2 id="latest-news-heading">Latest News</h2>
+  <div id="latest-news-container">
+    <ul id="latest-news-list">
+      {% for news_item in news %}
+        <li class="news-item">
+          <div class="news-image">
+              {% if news_item.image_name %}
+                  <img src="{{ news_item.image_name.url }}" alt="{{ news_item.title }}">
+              {% else %}
+                    <p>No image available</p>
+              {% endif %}
+          </div>
+          <div class="news-content">
+            <h3>{{ news_item.title }}</h3>
+            <p>{{ news_item.excerpt|truncatewords:20 }}</p>
+            <p>Slug: {{ news_item.slug }}</p>  {# Добавлено для отладки #}
+            {% if news_item.slug %}
+                <a href="{% url 'news-detail-page' slug=news_item.slug %}" class="read-more">Read more</a>
+            {% else %}
+                <p>No slug available for {{ news_item.title }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

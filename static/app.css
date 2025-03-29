@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+#main-navigation {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a; /* Добавлено для фона навигации */
+}
+
+#main-navigation a {
+  text-decoration: none;
+  color: #e0e0e0; /* Цвет текста */
+  font-weight: bold;
+  margin-left: 1rem; /* Отступ между ссылками */
+  line-height: 5rem; /* Выравнивание по вертикали */
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: #ffae00; /* Цвет при наведении */
+}
+
+#main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+  color: #ffffff; /* Цвет заголовка при наведении */
+}
+
+/* Добавлены стили для кнопки Logout */
+#main-navigation button {
+  background: none;
+  border: none;
+  color: #e0e0e0; /* Цвет текста */
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 5rem; /* Выравнивание по вертикали */
+  padding: 0 1rem; /* Увеличен отступ по бокам для увеличения ширины кнопки */
+  margin-left: 0.5rem; /* Отступ для правильного расположения */
+  height: 100%; /* Устанавливаем высоту кнопки равной высоте навигации */
+  font-size: 1.2rem; /* Увеличен размер шрифта для кнопки */
+}
+
+#main-navigation button:hover,
+#main-navigation button:active {
+  color: #cf79f1; /* Цвет при наведении */
+}
+
+/* Button for Adding News */
+.add-news-button {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #e0e0e0; /* Цвет текста */
+  font-weight: bold; /* Жирный шрифт */
+  line-height: 5rem; /* Выравнивание по вертикали */
+  margin-left: 1rem; /* Отступ слева для разделения от других ссылок */
+}
+
+.add-news-button:hover {
+  color: #ffae00; /* Цвет текста при наведении */
+}

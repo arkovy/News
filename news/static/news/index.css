@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Navigation */
+#main-navigation {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+}
+
+#main-navigation a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: #ffae00;
+}
+
+#main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+  color: #ffffff;
+}
+
+/* Latest News Section */
+#latest-news-section {
+  background-color: #1a1a1a;
+  padding: 4rem 10%;
+  margin-top: 6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+#latest-news-heading {
+  text-align: center;
+  color: #ffae00;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#latest-news-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#latest-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.news-item {
+  background-color: #2e2e2e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 20rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #333333;
+  margin-bottom: 1rem;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.news-content h3 {
+  font-size: 1.4rem;
+  color: #ffae00;
+  margin: 0 0 1rem 0;
+}
+
+.news-content p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #ffae00;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #ffffff;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  padding: 3rem;
+  background-color: #1a1a1a;
+  margin-top: 5rem;
+  color: #e0e0e0;
+}
+
+#about h2 {
+  font-size: 3rem;
+  color: #ffae00;
+}
+
+#about p {
+  font-size: 1.5rem;
+  color: #b0b0b0;
+}
+

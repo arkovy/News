@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    My Stored News
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'news/stored-news.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <section id="stored-news">
+        {% if not has_news %}
+            <p> You didn't save any news for later.</p>
+        {% endif %}
+        <ul>
+            {% for news in news %}
+                <li><a href="{% url 'news-detail-page' news.slug %}">{{ news.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

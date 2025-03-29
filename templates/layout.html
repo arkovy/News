@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+    {% block css_files %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header id="main-navigation">
+  <h1><a href="{% url 'starting-page' %}">NEWS WORLD</a></h1>
+  <nav>
+      <a href="{% url 'read-later' %}">Stored News</a>
+      <a href="{% url 'news-page' %}">All News</a>
+      <a href="{% url 'add-news' %}" class="add-news-button">Add News</a>  <!-- Кнопка для добавления новости -->
+      {% if user.is_authenticated %}
+          <form action="{% url 'logout' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+      {% else %}
+          <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'signup' %}">Sign Up</a>
+      {% endif %}
+  </nav>
+</header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

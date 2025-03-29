@@ -1,0 +1,43 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.news a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease;
+  padding: 1rem;
+}
+
+.news a:hover,
+.news a:active {
+  transform: scale(1.1);
+  background-color: #390281;
+  color: white;
+}
+
+.news img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.news h3 {
+  margin: 0.25rem 0;
+}
+
+.news time {
+  color: #666666;
+  margin: 0.25rem;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.news:hover time,
+.news:active time {
+  color: white;
+}

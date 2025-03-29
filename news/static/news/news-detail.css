@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; /* Применяем шрифт Roboto ко всему телу */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212; /* Цвет фона страницы */
+  color: #e0e0e0; /* Цвет текста по умолчанию */
+}
+
+#main-navigation {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 1000; /* Убедитесь, что заголовок выше других элементов */
+}
+
+#main-navigation a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: #ffae00;
+}
+
+#main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+  color: #ffffff;
+}
+
+/* Добавляем отступ для основного контента */
+main {
+  margin-top: 5rem; /* Отступ равный высоте заголовка */
+}
+
+/* Summary Section */
+#summary {
+  margin: 3rem auto; /* Убираем верхний отступ, так как он уже добавлен в main */
+  padding: 2rem;
+  width: 90%;
+  max-width: 90rem;
+  border-radius: 16px;
+  background-color: #1a1a1a;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  height: 22rem;
+}
+
+#summary h2 {
+  color: #ffae00;
+  font-size: 4.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#summary div {
+  margin-top: 1rem; /* Отступ сверху для контейнера с тегами и кнопкой */
+}
+
+#summary article {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: right;
+  color: #e0e0e0;
+}
+
+#summary article img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 12px;
+  transform: rotateZ(5deg);
+  border: 5px solid #ffae00;
+  margin-bottom: 1rem;
+}
+
+#summary address {
+  font-weight: bold;
+}
+
+#summary a {
+  color: #ffae00;
+  text-decoration: none;
+}
+
+#summary time {
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  width: 90%;
+  max-width: 90rem;
+  margin: 3rem auto;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #1a1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-right: 0.5rem; /* Отступ справа для тегов */
+  font-weight: bold; /* Жирный текст для тегов */
+  font-size: 1.2rem; /* Увеличенный размер шрифта для тегов */
+  transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.tag:hover {
+  background-color: #ffae00; /* Цвет фона при наведении */
+  color: #1a1a1a; /* Цвет текста при наведении */
+}
+
+#read-later button {
+  background-color: #1a1a1a; /* Цвет фона кнопки */
+  color: #e0e0e0; /* Цвет текста кнопки */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem; /* Увеличенный размер шрифта для кнопки */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+#read-later button:hover {
+  background-color: #ffae00; /* Цвет фона кнопки при наведении */
+  color: #1a1a1a; /* Цвет текста кнопки при наведении */
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  padding: 3rem;
+  background-color: #1a1a1a;
+  margin-top: 5rem;
+  color: #e0e0e0;
+}
+
+#about h2 {
+  font-size: 3rem;
+  color: #ffae00; /* Цвет заголовка секции About */
+}
+
+#about p {
+  font-size: 1.5rem; /* Размер шрифта для параграфов */
+  color: #b0b0b0; /* Цвет текста для параграфов */
+}
+
+/* Comment Form Section */
+#comment-form {
+  background-color: #1a1a1a; /* Цвет фона формы */
+  padding: 2rem; /* Отступы внутри формы */
+  border-radius: 12px; /* Закругленные углы формы */
+  margin: 2rem auto; /* Центрирование формы с отступом сверху и снизу */
+  width: 90%; /* Ширина формы */
+  max-width: 600px; /* Максимальная ширина формы */
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Тень */
+  text-align: center; /* Центрирование текста внутри формы */
+}
+
+#comment-form h2 {
+  color: #ffae00; /* Цвет заголовка формы */
+  font-size: 2rem; /* Размер шрифта заголовка */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.form-control {
+  margin-bottom: 1rem; /* Отступ между полями формы */
+}
+
+.form-field {
+  display: flex; /* Используем flexbox для выравнивания */
+  flex-direction: column; /* Вертикальное выравнивание */
+}
+
+.form-field label {
+  color: #e0e0e0; /* Цвет текста метки */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: #2a2a2a; /* Цвет фона полей ввода */
+  color: #e0e0e0; /* Цвет текста */
+  border: 1px solid #e0e0e0; /* Цвет границы */
+  border-radius: 12px; /* Закругленные углы для полей ввода */
+  padding: 0.5rem; /* Отступы внутри полей */
+  font-size: 1rem; /* Размер шрифта */
+  transition: border-color 0.3s; /* Плавный переход для границы */
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none; /* Убираем стандартный контур */
+  border-color: #ffae00; /* Цвет границы при фокусе */
+}
+
+/* Добавляем стиль для полей с ошибками */
+.form-field.invalid input,
+.form-field.invalid textarea {
+  border-color: red; /* Цвет границы для полей с ошибкой */
+}
+
+.submit-button {
+  background-color: #1a1a1a; /* Цвет фона кнопки */
+  color: #e0e0e0; /* Цвет текста кнопки */
+  padding: 0.5rem 1rem; /* Отступы внутри кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 12px; /* Закругленные углы для кнопки */
+  font-size: 1.2rem; /* Увеличенный размер шрифта для кнопки */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.submit-button:hover {
+  background-color: #ffae00; /* Цвет фона кнопки при наведении */
+  color: #1a1a1a;
+}
+
+/* Глобальные стили */
+section {
+  padding: 2rem; /* Отступы для секций */
+}
+

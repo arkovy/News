@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+/* Общие стили */
+body {
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    font-family: 'Lato', sans-serif; /* Основной шрифт для тела */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для формы добавления новостей */
+#add-news-container {
+    max-width: 600px;
+    margin: 10rem auto;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+#add-news-title {
+    text-align: center;
+    color: #ffae00;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#add-news-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#add-news-container input,
+#add-news-container textarea {
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+#add-news-container input:focus,
+#add-news-container textarea:focus {
+    background-color: #444;
+    border-color: #ffae00;
+}
+
+#add-news-container button {
+    padding: 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffae00;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+#add-news-container button:hover {
+    background-color: #e07b00;
+}
+
+/* Стили для подписей полей формы */
+#add-news-container label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cfcfcf;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Стили для заголовка новости */
+#news-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffae00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Стили для краткого содержания */
+#news-summary {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #cfcfcf;
+    font-style: italic;
+    border-left: 4px solid #ffae00;
+    padding-left: 1rem;
+}
+
+/* Стили для основного текста */
+#news-content {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.6;
+    text-align: justify;
+}
+

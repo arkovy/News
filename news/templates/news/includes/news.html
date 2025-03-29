@@ -1,0 +1,19 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        {% if news.slug %}
+            <a href="{% url 'news-detail-page' news.slug %}">
+        {% else %}
+            <a href="#"> <!-- Можно заменить на другой обработчик для пустого slug -->
+        {% endif %}
+            <img src="{{ news.image_name.url }}" alt='{{ news.title }}'/>
+            <div class="post__content">
+                <h3>{{ news.title }}</h3>
+                <p>
+                   {{ news.excerpt }}
+                </p>
+            </div>
+        </a>
+    </article>
+</li>

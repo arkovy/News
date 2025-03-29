@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+    Add News
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'news/add-news.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div id="add-news-container" class="add-news-form"> <!-- Уникальный идентификатор для контейнера формы -->
+        <h2 id="add-news-title">Add News</h2> <!-- Уникальный идентификатор для заголовка -->
+        <form method="post" enctype="multipart/form-data">  <!-- Не забудьте добавить enctype для загрузки файлов -->
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add News</button>
+        </form>
+    </div>
+{% endblock %}
